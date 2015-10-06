@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aa25d0ff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/editUsername"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="33dp"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hint="Username"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editUsername"
+            android:layout_centerInParent="true"
+            android:ellipsize="start"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textStyle="italic" />
+
+        <CheckBox
+            android:id="@+id/chkRememberme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/btnLogin"
+            android:layout_alignRight="@+id/btnLogin"
+            android:layout_below="@+id/editPassword"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/login_remembername" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chkRememberme"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:text="Login"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</LinearLayout>
