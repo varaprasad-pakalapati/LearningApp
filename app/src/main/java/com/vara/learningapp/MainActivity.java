@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.vara.learningapp.downloader.DownloaderActivity;
+import com.vara.learningapp.youtuberplayer.YoutubeActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -69,6 +70,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_downloader:
                 Intent downloaderActivity = new Intent(this, DownloaderActivity.class);
                 startActivity(downloaderActivity);
+                return true;
+            case R.id.action_youtube:
+                Intent youtubeActivity = new Intent(this, YoutubeActivity.class);
+                startActivity(youtubeActivity);
                 return true;
         }
 
