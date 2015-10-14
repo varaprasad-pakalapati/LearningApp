@@ -40,8 +40,8 @@
             android:label="@string/action_calculator" >
         </activity>
         <activity
+            android:name=".YoutubeActivity"
             android:exported="true"
-            android:name="com.vara.learningapp.youtuberplayer.YoutubeActivity"
             android:label="@string/title_activity_youtube" >
         </activity>
 
@@ -57,6 +57,11 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <activity
+            android:name=".StandaloneActivity"
+            android:label="@string/title_activity_standalone"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

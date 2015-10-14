@@ -11,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.vara.learningapp.downloader.DownloaderActivity;
-import com.vara.learningapp.youtuberplayer.YoutubeActivity;
 
 public class MainActivity extends AppCompatActivity {
 

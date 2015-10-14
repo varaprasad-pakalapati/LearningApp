@@ -13,4 +13,5 @@
     <string name="help_instructions">Enter Two Numbers</string>
     <string name="title_activity_youtube">YoutubeActivity</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_standalone">StandaloneActivity</string>
 </resources>

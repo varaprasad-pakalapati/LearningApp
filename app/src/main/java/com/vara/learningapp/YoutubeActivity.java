@@ -1,4 +1,4 @@
-package com.vara.learningapp.youtuberplayer;
+package com.vara.learningapp;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,14 +9,13 @@ import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
-import com.vara.learningapp.R;
 
 /**
  * Created by Vara.Pakalapati on 09/10/2015.
  */
 public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
-    private String GOOGLE_API_KEY = "AIzaSyBJ81j1yRFFO9SUddBmceJHpjyb3wGRTfo";
+    private String GOOGLE_API_KEY = "AIzaSyBAlXbT6FFnEwiOmjfcN8_BU8zOmN8bCHA";
     private String YOUTUBE_VIDEO_ID = "Zc7SeDL-0uE";
 
     @Override
@@ -25,29 +24,6 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
         setContentView(R.layout.activity_youtube);
         YouTubePlayerView youTubePlayerView = (YouTubePlayerView) findViewById(R.id.youtube_player);
         youTubePlayerView.initialize(GOOGLE_API_KEY, this);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_login, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            Toast toastMessage = Toast.makeText(this, "The settings menu got tapped", Toast.LENGTH_LONG);
-            toastMessage.show();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -63,7 +39,7 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
 
     @Override
     public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-        Toast.makeText(this, "Can not initialize the Youtube player", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, youTubeInitializationResult.toString(), Toast.LENGTH_LONG).show();
     }
 
     private YouTubePlayer.PlaybackEventListener playbackEventListener = new YouTubePlayer.PlaybackEventListener() {
