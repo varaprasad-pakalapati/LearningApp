@@ -59,8 +59,8 @@
 
         <activity
             android:name=".StandaloneActivity"
-            android:label="@string/title_activity_standalone"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:label="@string/action_newyoutube"
+            android:parentActivityName=".MainActivity">
         </activity>
     </application>
 

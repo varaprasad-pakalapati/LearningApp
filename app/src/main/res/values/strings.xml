@@ -10,6 +10,7 @@
     <string name="action_downloader">Downloader</string>
     <string name="login_remembername">Remember me</string>
     <string name="action_youtube">YouTube</string>
+    <string name="action_newyoutube">New YouTube</string>
     <string name="help_instructions">Enter Two Numbers</string>
     <string name="title_activity_youtube">YoutubeActivity</string>
     <string name="title_activity_maps">Map</string>

@@ -70,6 +70,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent downloaderActivity = new Intent(this, DownloaderActivity.class);
                 startActivity(downloaderActivity);
                 return true;
+            case R.id.action_newyoutube:
+                Intent newYoutubeActivity = new Intent(this, StandaloneActivity.class);
+                startActivity(newYoutubeActivity);
+                return true;
             case R.id.action_youtube:
                 Intent youtubeActivity = new Intent(this, YoutubeActivity.class);
                 startActivity(youtubeActivity);
