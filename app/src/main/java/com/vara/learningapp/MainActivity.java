@@ -52,32 +52,33 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        Intent intent = null;
 
         //noinspection SimplifiableIfStatement
         switch (id) {
             case R.id.action_settings:
                 Toast.makeText(this, "The settings menu got tapped", Toast.LENGTH_LONG).show();
-                return true;
+                break;
             case R.id.action_login:
-                Intent loginActivity = new Intent(this, LoginActivity.class);
-                startActivity(loginActivity);
-                return true;
+                intent = new Intent(this, LoginActivity.class);
+                break;
             case R.id.action_calculator:
-                Intent calculatorActivity = new Intent(this, CalculatorActivity.class);
-                startActivity(calculatorActivity);
-                return true;
+                intent = new Intent(this, CalculatorActivity.class);
+                break;
             case R.id.action_downloader:
-                Intent downloaderActivity = new Intent(this, DownloaderActivity.class);
-                startActivity(downloaderActivity);
-                return true;
+                intent = new Intent(this, DownloaderActivity.class);
+                break;
             case R.id.action_newyoutube:
-                Intent newYoutubeActivity = new Intent(this, StandaloneActivity.class);
-                startActivity(newYoutubeActivity);
-                return true;
+                intent = new Intent(this, StandaloneActivity.class);
+                break;
             case R.id.action_youtube:
-                Intent youtubeActivity = new Intent(this, YoutubeActivity.class);
-                startActivity(youtubeActivity);
-                return true;
+                intent = new Intent(this, YoutubeActivity.class);
+                break;
+        }
+
+        if(intent != null) {
+            startActivity(intent);
+            return true;
         }
 
         return super.onOptionsItemSelected(item);

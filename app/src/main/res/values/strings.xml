@@ -15,4 +15,13 @@
     <string name="title_activity_youtube">YoutubeActivity</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_standalone">StandaloneActivity</string>
+
+    <string-array name="navigation_items">
+        <item>@string/action_home</item>
+        <item>@string/action_login</item>
+        <item>@string/action_calculator</item>
+        <item>@string/action_downloader</item>
+        <item>@string/action_youtube</item>
+        <item>@string/action_newyoutube</item>
+    </string-array>
 </resources>
