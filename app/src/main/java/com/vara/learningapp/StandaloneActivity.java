@@ -2,13 +2,10 @@ package com.vara.learningapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Switch;
 
 import com.google.android.youtube.player.YouTubeStandalonePlayer;
 
@@ -21,6 +18,8 @@ public class StandaloneActivity extends AppCompatActivity implements View.OnClic
     private Button btnPlayVideo;
     private Button btnPlayPlaylist;
 
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +30,13 @@ public class StandaloneActivity extends AppCompatActivity implements View.OnClic
 
         btnPlayVideo.setOnClickListener(this);
         btnPlayPlaylist.setOnClickListener(this);
+
+        // Creates items on action bar
+        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
+
+        // Adds parent activity navigation
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 

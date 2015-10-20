@@ -6,6 +6,11 @@
     android:orientation="vertical"
     tools:context=".StandaloneActivity">
 
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar">
+    </include>
+
     <Button
         android:id="@+id/btnPlayvideo"
         android:layout_width="wrap_content"

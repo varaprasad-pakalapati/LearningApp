@@ -1,20 +1,46 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item
+        android:id="@+id/action_search"
+        android:orderInCategory="200"
+        android:title="Search"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_user"
+        android:orderInCategory="300"
+        android:title="User"
+        android:icon="@drawable/ic_user"
+        app:showAsAction="ifRoom"/>
 
-    <item android:id="@+id/action_login" android:title="@string/action_login"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/action_youtube" android:title="@string/action_youtube"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/action_newyoutube" android:title="@string/action_newyoutube"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/action_calculator" android:title="@string/action_calculator"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/action_downloader" android:title="@string/action_downloader"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/action_about" android:title="@string/action_about"
-        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_login"
+        android:title="@string/action_login"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_youtube"
+        android:title="@string/action_youtube"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_newyoutube"
+        android:title="@string/action_newyoutube"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_calculator"
+        android:title="@string/action_calculator"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_downloader"
+        android:title="@string/action_downloader"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_about"
+        android:title="@string/action_about"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
 
 </menu>

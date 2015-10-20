@@ -1,7 +1,9 @@
 package com.vara.learningapp.downloader;
 
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,6 +22,8 @@ public class DownloaderActivity extends AppCompatActivity {
     private Button btnParse;
     private ListView xmlListView;
 
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +34,14 @@ public class DownloaderActivity extends AppCompatActivity {
 
         btnParse = (Button) findViewById(R.id.btnParse);
         xmlListView = (ListView) findViewById(R.id.xmlListView);
+
+        // Creates items on action bar
+        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
+
+        // Adds parent activity navigation
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         btnParse.setOnClickListener(new View.OnClickListener() {
             @Override

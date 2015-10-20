@@ -2,6 +2,7 @@ package com.vara.learningapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,6 +20,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText username;
     private EditText password;
     private CheckBox rememberMe;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,13 @@ public class LoginActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.editPassword);
         rememberMe = (CheckBox) findViewById(R.id.chkRememberme);
         loginButton = (Button) findViewById(R.id.btnLogin);
+
+        // Creates items on action bar
+        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
+
+        // Adds parent activity navigation
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
        View.OnClickListener btnLoginClick = new View.OnClickListener(){
            @Override

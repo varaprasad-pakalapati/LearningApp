@@ -3,6 +3,7 @@ package com.vara.learningapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,6 +26,8 @@ public class CalculatorActivity extends AppCompatActivity {
     private TextView txtResult;
     private Button btnClear;
 
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,10 @@ public class CalculatorActivity extends AppCompatActivity {
         btnDivision = (Button) findViewById(R.id.btnDivision);
         txtResult = (TextView) findViewById(R.id.txtResult);
         btnClear = (Button) findViewById(R.id.btnClear);
+
+        // Creates items on action bar
+        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
 
         btnAddition.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,9 +93,6 @@ public class CalculatorActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -105,16 +109,14 @@ public class CalculatorActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public enum Operator
-    {
+    public enum Operator {
         Addition,
         Subtraction,
         Multiplication,
         Division
     }
 
-    private void Calculate(Operator op)
-    {
+    private void Calculate(Operator op) {
         double result = 0;
         double opera1 = 0 ;
         double opera2 = 0;

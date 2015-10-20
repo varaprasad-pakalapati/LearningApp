@@ -1,12 +1,20 @@
 package com.vara.learningapp;
 
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,10 +25,70 @@ public class MainActivity extends AppCompatActivity {
     private TextView textUpdate;
     private int noOfTimesClicked = 0;
 
+    private Toolbar toolbar;
+
+    DrawerLayout mDrawerLayout;
+    ListView mDrawerList;
+    ActionBarDrawerToggle mDrawerToggle;
+    String mTitle = "";
+
+//    @Override
+//    protected void onPostCreate(Bundle savedInstanceState) {
+//        super.onPostCreate(savedInstanceState);
+//        mDrawerToggle.syncState();
+//    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        mTitle = (String) getTitle();
+//        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        mDrawerList = (ListView) findViewById(R.id.drawer_list);
+        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
+//
+//        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close) {
+//            @Override
+//            public void onDrawerClosed(View drawerView) {
+//                getActionBar().setTitle(mTitle);
+//                invalidateOptionsMenu();
+//            }
+//
+//            @Override
+//            public void onDrawerOpened(View drawerView) {
+//                getActionBar().setTitle("Select a option");
+//                invalidateOptionsMenu();
+//            }
+//        };
+//
+//        mDrawerLayout.setDrawerListener(mDrawerToggle);
+//
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getBaseContext(), R.layout.drawer_list_item, getResources().getStringArray(R.array.navigation_items));
+//        mDrawerList.setAdapter(adapter);
+//
+//        getActionBar().setHomeButtonEnabled(true);
+//        getActionBar().setDisplayHomeAsUpEnabled(true);
+//        mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                String[] options = getResources().getStringArray(R.array.navigation_items);
+//                mTitle = options[position];
+//                RiverFragment riverFragment = new RiverFragment();
+//
+//                Bundle data = new Bundle();
+//                data.putInt("position", position);
+//                riverFragment.setArguments(data);
+//                android.app.FragmentManager fragmentManager = getFragmentManager();
+//                FragmentTransaction ft = fragmentManager.beginTransaction();
+//                ft.replace(R.id.content_frame, riverFragment);
+//                ft.commit();
+//
+//                mDrawerLayout.closeDrawer(mDrawerList);
+//            }
+//        });
+
 
         Button clickMeButton = (Button) findViewById(R.id.button_clickme);
         textUpdate = (TextView) findViewById(R.id.textview_textUpdate);
@@ -51,6 +119,11 @@ public class MainActivity extends AppCompatActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+
+//        if(mDrawerToggle.onOptionsItemSelected(item)) {
+//            return true;
+//        }
+
         int id = item.getItemId();
         Intent intent = null;
 
@@ -83,4 +156,11 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+//    @Override
+//    public boolean onPrepareOptionsMenu(Menu menu) {
+//        boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
+//        menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
+//        return super.onPrepareOptionsMenu(menu);
+//    }
 }
